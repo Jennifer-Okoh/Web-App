@@ -2,17 +2,17 @@
 GET /books
 """
 def test_get_books(db_connection, web_client): # Note web_client fixture, see conftest.py
-    # We seed our database with the book store seed file
-    db_connection.seed("seeds/book_store.sql")
+#     # We seed our database with the book store seed file
+        db_connection.seed("seeds/book_store.sql")
 
-    # We make a GET request to /books
-    response = web_client.get("/books")
+#     # We make a GET request to /books
+        response = web_client.get("/books")
 
-    # We assert that the response status code is 200
-    assert response.status_code == 200
+#     # We assert that the response status code is 200
+        assert response.status_code == 200
 
-    # We assert that the response data is the same as the string we expect
-    assert response.data.decode("utf-8") == "\n".join([
+#     # We assert that the response data is the same as the string we expect
+        assert response.data.decode("utf-8") == "\n".join([
         "Book(1, Invisible Cities, Italo Calvino)",
         "Book(2, The Man Who Was Thursday, GK Chesterton)",
         "Book(3, Bluets, Maggie Nelson)",

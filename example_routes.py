@@ -43,7 +43,7 @@ def apply_example_routes(app):
 
 
     # DELETE /books/<id>
-    # Deletes a book
+    # Deletes a bookhttps://journey.makers.tech/pages/yoga-and-meditation-resources
     # Try it:
     #   ; curl -X DELETE http://localhost:5001/books/1
     @app.route('/books/<int:id>', methods=['DELETE'])
